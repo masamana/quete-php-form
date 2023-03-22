@@ -1,11 +1,11 @@
 <?php
 
-$name = $_POST['name'];
+$lastname = $_POST['lastname'];
 $firstname = $_POST['firstname'];
 $email = $_POST['email'];
 $phone = $_POST['phone'];
 $subjects = $_POST['subjects'];
-$message = $_POST['user_message'];
+$message = $_POST['message'];
 
 ?>
 
@@ -21,17 +21,19 @@ $message = $_POST['user_message'];
 </head>
 
 <body>
-    <div class="container bg-light border rounded p-5">
-        <h1>Merci pour votre message !</h1>
-        <p>Merci <?= $name . " " .  $firstname ?> de nous avoir contacté à propos de <?= $subjects ?></p>
+    <main class="container">
 
-        <p>Un de nos conseillers vous contactera soit à l’adresse <?= $email ?> ou par téléphone au <?= $phone ?> dans les plus brefs délais pour traiter votre demande : </p>
+        <div class="container bg-light border rounded p-5">
+            <h1>Merci pour votre message !</h1>
+            <p>Merci <?= $firstname . " " .  $lastname ?> de nous avoir contacté à propos de <?= $subjects ?></p>
 
-        <p><?= $message ?></p>
+            <p>Un de nos conseillers vous contactera soit à l’adresse <?= $email ?> ou par téléphone au <?= $phone ?> dans les plus brefs délais pour traiter votre demande : </p>
 
-        <h3 class="text-center mt-5">Nous allons vous recontacter très vite !</h3>
-    </div>
+            <p><?= $message ?></p>
 
+            <h3 class="text-center mt-5">Nous allons vous recontacter très vite !</h3>
+        </div>
+    </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
